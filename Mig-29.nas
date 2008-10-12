@@ -1,13 +1,13 @@
-    setlistener("/controls/engines/engine[0]/throttle", func {
-	position=cmdarg().getValue();
+    setlistener("/controls/engines/engine[0]/throttle", func(n) {
+	position=n.getValue();
     setprop("/controls/engines/engine[0]/reheat",0);
         if(position >= 0.95){
 
                setprop("/controls/engines/engine[0]/reheat",1);
      };
    },1);
-    setlistener("/controls/engines/engine[1]/throttle", func {
-	position=cmdarg().getValue();
+    setlistener("/controls/engines/engine[1]/throttle", func(n) {
+	position=n.getValue();
     setprop("/controls/engines/engine[1]/reheat",0);
         if(position >= 0.95){
 
