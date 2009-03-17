@@ -1,26 +1,275 @@
 <?xml version="1.0"?>
 
-  <PropertyList> 
-    <path>Mig-29.ac</path>
-    
+<!-- Mig-29 9-12A                         -->
+<!-- Gary R. Neely 'Buckaroo', Nov 2008  -->
+
+<PropertyList> 
+
+<path>mesh_airframe.ac</path>
+
+
+<!-- Sub-Model Imports -->
+
+<model>
+  <name>Cockpit</name>
+  <path>Aircraft/Mig-29/Models/Mig-29_Cockpit.xml</path>
+</model>
+<model>
+  <name>Exhaust_Nozzles</name>
+  <path>Aircraft/Mig-29/Models/Mig-29_Nozzles.xml</path>
+</model>
+<model>
+  <name>Reheat</name>
+  <path>Aircraft/Mig-29/Models/Mig-29_Reheat.xml</path>
+</model>
+<model>
+  <name>External_Lights</name>
+  <path>Aircraft/Mig-29/Models/Mig-29_Lights.xml</path>
+</model>
+
+<!-- Level Of Detail -->
+
+<animation>
+  <type>range</type>
+  <object-name>Cockpit</object-name>
+  <min-m>0</min-m>
+  <max-m>50</max-m>
+</animation>
+<!--
+<animation>
+  <type>range</type>
+  <object-name>Antennas</object-name>
+  <min-m>0</min-m>
+  <max-m>150</max-m>
+</animation>
+-->
+
+<!-- Special Shaders -->
+
+<animation>
+  <type>noshadow</type>
+  <object-name>WheelGuard</object-name>
+  <object-name>Canopy</object-name>
+</animation>
+
+
+<!-- Animations  -->
+
+
+<!-- Rudders -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>RudderL</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>-25</factor>
+  <axis>
+    <x1-m>14.042</x1-m>
+    <y1-m>-1.806</y1-m>
+    <z1-m>0.525</z1-m>
+    <x2-m>14.376</x2-m>
+    <y2-m>-1.922</y2-m>
+    <z2-m>1.739</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>RudderR</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>-25</factor>
+  <axis>
+    <x1-m>14.042</x1-m>
+    <y1-m>1.806</y1-m>
+    <z1-m>0.525</z1-m>
+    <x2-m>14.376</x2-m>
+    <y2-m>1.922</y2-m>
+    <z2-m>1.739</z2-m>
+  </axis>
+</animation>
+
+<!-- Elevons -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>StabilizerL</object-name>
+  <property>surface-positions/left-elevon-pos-norm</property>
+  <factor>30</factor>
+  <axis>
+    <x1-m>13.488</x1-m>
+    <y1-m>-1.833</y1-m>
+    <z1-m>0.101</z1-m>
+    <x2-m>13.488</x2-m>
+    <y2-m>1.833</y2-m>
+    <z2-m>0.101</z2-m>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>StabilizerR</object-name>
+  <property>surface-positions/right-elevon-pos-norm</property>
+  <factor>30</factor>
+  <axis>
+    <x1-m>13.488</x1-m>
+    <y1-m>-1.833</y1-m>
+    <z1-m>0.101</z1-m>
+    <x2-m>13.488</x2-m>
+    <y2-m>1.833</y2-m>
+    <z2-m>0.101</z2-m>
+  </axis>
+</animation>
+
+<!-- Ailerons -->
+<!-- Note: The Mig-29 9-12 has an odd 5 deg up neutral position for ailerons, related -->
+<!-- to better spin characteristics. Observable if one looks close at photos. -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>AileronL</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>20</factor>
+  <offset-deg>-5</offset-deg>
+  <axis>
+    <x1-m>12.062</x1-m>
+    <y1-m>-5.065</y1-m>
+    <z1-m>0.106</z1-m>
+    <x2-m>11.656</x2-m>
+    <y2-m>-3.715</y2-m>
+    <z2-m>0.149</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>AileronR</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>20</factor>
+  <offset-deg>5</offset-deg>
+  <axis>
+    <x1-m>12.062</x1-m>
+    <y1-m>5.065</y1-m>
+    <z1-m>0.106</z1-m>
+    <x2-m>11.656</x2-m>
+    <y2-m>3.715</y2-m>
+    <z2-m>0.149</z2-m>
+  </axis>
+</animation>
+
+<!-- Flaps -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>FlapsL</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>20</factor>
+  <axis>
+    <x1-m>11.656</x1-m>
+    <y1-m>-3.715</y1-m>
+    <z1-m>0.149</z1-m>
+    <x2-m>11.102</x2-m>
+    <y2-m>-1.833</y2-m>
+    <z2-m>0.207</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>FlapsR</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>-20</factor>
+  <axis>
+    <x1-m>11.656</x1-m>
+    <y1-m>3.715</y1-m>
+    <z1-m>0.149</z1-m>
+    <x2-m>11.102</x2-m>
+    <y2-m>1.833</y2-m>
+    <z2-m>0.207</z2-m>
+  </axis>
+</animation>
+
+<!-- Slats -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>SlatsL</object-name>
+  <property>surface-positions/slat-pos-norm</property>
+  <factor>-20</factor>
+  <axis>
+    <x1-m>10.889</x1-m>
+    <y1-m>-5.067</y1-m>
+    <z1-m>0.182</z1-m>
+    <x2-m>8.206</x2-m>
+    <y2-m>-1.723</y2-m>
+    <z2-m>0.344</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>SlatsR</object-name>
+  <property>surface-positions/slat-pos-norm</property>
+  <factor>20</factor>
+  <axis>
+    <x1-m>10.889</x1-m>
+    <y1-m>5.067</y1-m>
+    <z1-m>0.182</z1-m>
+    <x2-m>8.206</x2-m>
+    <y2-m>1.723</y2-m>
+    <z2-m>0.344</z2-m>
+  </axis>
+</animation>
+
+<!-- Speed Brake -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>AirBrakeU</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <factor>-56</factor>
+  <axis>
+    <x1-m>13.140</x1-m>
+    <y1-m>-0.435</y1-m>
+    <z1-m>0.160</z1-m>
+    <x2-m>13.140</x2-m>
+    <y2-m>0.435</y2-m>
+    <z2-m>0.160</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>AirBrakeB</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <factor>60</factor>
+  <axis>
+    <x1-m>13.140</x1-m>
+    <y1-m>-0.435</y1-m>
+    <z1-m>-0.160</z1-m>
+    <x2-m>13.140</x2-m>
+    <y2-m>0.435</y2-m>
+    <z2-m>-0.160</z2-m>
+  </axis>
+</animation>
+
 <!-- left Gear -->
+
+<animation>
+  <type>select</type>
+  <object-name>gear1.L</object-name>
+  <object-name>gear2.L</object-name>
+  <object-name>wheel.L</object-name>
+  <condition>
+    <greater-than>
+      <property>gear/gear[1]/position-norm</property>
+      <value>0.0</value>
+    </greater-than>
+  </condition>
+</animation>
+
     <animation> 
       <type>rotate</type>
       <object-name>fwdgeardoor.L</object-name>
       <property>/gear/gear[1]/position-norm</property>
       <interpolation> 
-        <entry>
-          <ind>0</ind>
-          <dep>0</dep>
-        </entry>
-        <entry>
-          <ind>0.4</ind>
-          <dep>155</dep>
-        </entry>
-		<entry>
-          <ind>1</ind>
-          <dep>155</dep>
-        </entry>
+        <entry><ind>  0</ind><dep>  0</dep></entry>
+        <entry><ind>0.4</ind><dep>155</dep></entry>
+	<entry><ind>  1</ind><dep>155</dep></entry>
       </interpolation>
       <center> 
         <x-m>8.633</x-m>
@@ -102,7 +351,22 @@
    <z2-m>0.034</z2-m>
       </axis>
     </animation>
+
 <!-- right Gear -->
+
+<animation>
+  <type>select</type>
+  <object-name>gear1.R</object-name>
+  <object-name>gear2.R</object-name>
+  <object-name>wheel.R</object-name>
+  <condition>
+    <greater-than>
+      <property>gear/gear[2]/position-norm</property>
+      <value>0.0</value>
+    </greater-than>
+  </condition>
+</animation>
+
     <animation> 
       <type>rotate</type>
       <object-name>fwdgeardoor.R</object-name>
@@ -203,11 +467,27 @@
     </animation>
 
 <!-- nose gear -->
+
+<animation>
+  <type>select</type>
+  <object-name>nosegear1</object-name>
+  <object-name>nosegear2</object-name>
+  <object-name>nosewheels</object-name>
+  <object-name>WheelGuard</object-name>
+  <condition>
+    <greater-than>
+      <property>gear/gear[0]/position-norm</property>
+      <value>0.0</value>
+    </greater-than>
+  </condition>
+</animation>
+
     <animation> 
       <type>rotate</type>
       <object-name>nosegear1</object-name>
       <object-name>nosegear2</object-name>
       <object-name>nosewheels</object-name>
+      <object-name>WheelGuard</object-name>
       <property>/gear/gear[0]/position-norm</property>
       <interpolation> 
         <entry>
@@ -328,195 +608,212 @@
       </axis>
     </animation>
 
+<animation>
+  <type>rotate</type>
+  <object-name>nosewheels</object-name>
+  <object-name>WheelGuard</object-name>
+  <condition>
+    <less-than>
+      <property>position/altitude-agl-ft</property>
+      <value>50.0</value>
+    </less-than>
+  </condition>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>-50</factor>
+  <axis>
+    <x1-m>6.008</x1-m>
+    <y1-m>0</y1-m>
+    <z1-m>-0.936</z1-m>
+    <x2-m>6.069</x2-m>
+    <y2-m>0</y2-m>
+    <z2-m>-1.490</z2-m>
+  </axis>
+</animation>
 
-	
-<!-- left nozzle -->
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleL.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>-0.957</y-m>
-        <z-m>-0.176</z-m>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleL.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>-0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>20</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleL.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>-0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>40</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleL.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>-0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>60</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleL.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>-0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>80</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleL.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>-0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>100</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleL.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>-0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>120</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleL.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>-0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>140</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleL.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>-0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>160</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/pipe.ac</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>-0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>160</roll-deg>
-      </offsets>
-    </model>
-<!-- right nozzle -->
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleR.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>0.957</y-m>
-        <z-m>-0.176</z-m>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleR.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>20</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleR.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>40</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleR.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>60</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleR.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>80</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleR.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>100</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleR.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>120</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleR.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>140</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/nozzleR.xml</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>160</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/pipe.ac</path>
-      <offsets> 
-        <x-m>13.847</x-m>
-        <y-m>0.957</y-m>
-        <z-m>-0.176</z-m>
-		<roll-deg>160</roll-deg>
-      </offsets>
-    </model>
-	<model> 
-      <path>Aircraft/Mig-29/Models/transparent.xml</path>
-      <offsets> 
-        <x-m>0</x-m>
-        <y-m>0</y-m>
-        <z-m>0</z-m>
-      </offsets>
-    </model>	    
 
-  </PropertyList>
+<!-- Intake louver animations -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>LouversL1</object-name>
+  <property>/gear/gear[1]/wow</property>
+  <interpolation> 
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>60</dep></entry>
+  </interpolation>
+  <axis>
+    <x1-m>5.939</x1-m>
+    <y1-m>-1.105</y1-m>
+    <z1-m>0.266</z1-m>
+    <x2-m>5.939</x2-m>
+    <y2-m>-0.579</y2-m>
+    <z2-m>0.566</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>LouversL2</object-name>
+  <property>/gear/gear[1]/wow</property>
+  <interpolation> 
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>60</dep></entry>
+  </interpolation>
+  <axis>
+    <x1-m>6.221</x1-m>
+    <y1-m>-1.105</y1-m>
+    <z1-m>0.309</z1-m>
+    <x2-m>6.221</x2-m>
+    <y2-m>-0.579</y2-m>
+    <z2-m>0.584</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>LouversL3</object-name>
+  <property>/gear/gear[1]/wow</property>
+  <interpolation> 
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>60</dep></entry>
+  </interpolation>
+  <axis>
+    <x1-m>6.438</x1-m>
+    <y1-m>-1.105</y1-m>
+    <z1-m>0.341</z1-m>
+    <x2-m>6.438</x2-m>
+    <y2-m>-0.579</y2-m>
+    <z2-m>0.597</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>LouversL4</object-name>
+  <property>/gear/gear[1]/wow</property>
+  <interpolation> 
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>60</dep></entry>
+  </interpolation>
+  <axis>
+    <x1-m>6.646</x1-m>
+    <y1-m>-1.105</y1-m>
+    <z1-m>0.373</z1-m>
+    <x2-m>6.646</x2-m>
+    <y2-m>-0.579</y2-m>
+    <z2-m>0.608</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>LouversL5</object-name>
+  <property>/gear/gear[1]/wow</property>
+  <interpolation> 
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>60</dep></entry>
+  </interpolation>
+  <axis>
+    <x1-m>6.884</x1-m>
+    <y1-m>-1.105</y1-m>
+    <z1-m>0.409</z1-m>
+    <x2-m>6.884</x2-m>
+    <y2-m>-0.579</y2-m>
+    <z2-m>0.618</z2-m>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>LouversR1</object-name>
+  <property>/gear/gear[1]/wow</property>
+  <interpolation> 
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>-60</dep></entry>
+  </interpolation>
+  <axis>
+    <x1-m>5.939</x1-m>
+    <y1-m>1.105</y1-m>
+    <z1-m>0.266</z1-m>
+    <x2-m>5.939</x2-m>
+    <y2-m>0.579</y2-m>
+    <z2-m>0.566</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>LouversR2</object-name>
+  <property>/gear/gear[1]/wow</property>
+  <interpolation> 
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>-60</dep></entry>
+  </interpolation>
+  <axis>
+    <x1-m>6.221</x1-m>
+    <y1-m>1.105</y1-m>
+    <z1-m>0.309</z1-m>
+    <x2-m>6.221</x2-m>
+    <y2-m>0.579</y2-m>
+    <z2-m>0.584</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>LouversR3</object-name>
+  <property>/gear/gear[1]/wow</property>
+  <interpolation> 
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>-60</dep></entry>
+  </interpolation>
+  <axis>
+    <x1-m>6.438</x1-m>
+    <y1-m>1.105</y1-m>
+    <z1-m>0.341</z1-m>
+    <x2-m>6.438</x2-m>
+    <y2-m>0.579</y2-m>
+    <z2-m>0.597</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>LouversR4</object-name>
+  <property>/gear/gear[1]/wow</property>
+  <interpolation> 
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>-60</dep></entry>
+  </interpolation>
+  <axis>
+    <x1-m>6.646</x1-m>
+    <y1-m>1.105</y1-m>
+    <z1-m>0.373</z1-m>
+    <x2-m>6.646</x2-m>
+    <y2-m>0.579</y2-m>
+    <z2-m>0.608</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>LouversR5</object-name>
+  <property>/gear/gear[1]/wow</property>
+  <interpolation> 
+    <entry><ind>0</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep>-60</dep></entry>
+  </interpolation>
+  <axis>
+    <x1-m>6.884</x1-m>
+    <y1-m>1.105</y1-m>
+    <z1-m>0.409</z1-m>
+    <x2-m>6.884</x2-m>
+    <y2-m>0.579</y2-m>
+    <z2-m>0.618</z2-m>
+  </axis>
+</animation>
+
+<!-- Intake Screens -->
+
+<animation>
+  <type>select</type>
+  <object-name>IntakeScreenL</object-name>
+  <object-name>IntakeScreenR</object-name>
+  <condition>
+    <property>/gear/gear[1]/wow</property>
+  </condition>
+</animation>
+
+</PropertyList>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<!-- Mig-29 Fulcrum-A 2D Hotspot panels -->
+<!-- Gary R. Neely 'Buckaroo', 2009     -->
+
+<PropertyList>
+
+
+<!-- Main -->
+
+<panel>
+  <path>Aircraft/Mig-29/Panels/panel_main.xml</path>
+  <top-left>
+    <x-m>3.747</x-m>
+    <y-m>-0.222</y-m>
+    <z-m>0.927</z-m>
+  </top-left>
+  <bottom-left>
+    <x-m>3.747</x-m>
+    <y-m>-0.222</y-m>
+    <z-m>0.660</z-m>
+  </bottom-left>
+  <bottom-right>
+    <x-m>3.747</x-m>
+    <y-m>0.241</y-m>
+    <z-m>0.660</z-m>
+  </bottom-right>
+</panel>
+
+<panel>
+  <path>Aircraft/Mig-29/Panels/panel_main_left.xml</path>
+  <top-left>
+    <x-m>3.763</x-m>
+    <y-m>-0.310</y-m>
+    <z-m>0.927</z-m>
+  </top-left>
+  <bottom-left>
+    <x-m>3.763</x-m>
+    <y-m>-0.310</y-m>
+    <z-m>0.677</z-m>
+  </bottom-left>
+  <bottom-right>
+    <x-m>3.747</x-m>
+    <y-m>-0.222</y-m>
+    <z-m>0.677</z-m>
+  </bottom-right>
+</panel>
+
+
+</PropertyList>
+

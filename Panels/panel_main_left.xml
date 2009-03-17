@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<!-- Mig-29 Fulcrum-A 2D Hotspot panels -->
+<!-- Gary R. Neely 'Buckaroo', 2009     -->
+
+
+<PropertyList>
+
+<!-- 89mm x 250mm -->
+
+<name>Main Panel Left</name>
+<background>Aircraft/Mig-29/Panels/transparent-bg.rgb</background>
+<w>128</w>
+<h>360</h>
+
+<instruments>
+
+  <instrument>
+    <name>panel hotspots</name>
+    <x>64</x> <!-- center x -->
+    <y>180</y> <!-- center y -->
+    <w>128</w>
+    <h>360</h>
+    <w-base>128</w-base>
+    <h-base>360</h-base>
+
+    <actions>
+
+<!-- Altimeter inHG adjustment -->
+
+      <action>
+        <name>calibrate fine dec</name>
+        <button>0</button>
+        <x>-64</x>
+        <y>-88</y>
+        <w>20</w>
+        <h>32</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/instrumentation/altimeter/setting-inhg</property>
+          <step>-0.01</step>
+          <min>27.9</min>
+          <max>31.4</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>calibrate fine inc</name>
+        <button>0</button>
+        <x>-44</x>
+        <y>-88</y>
+        <w>20</w>
+        <h>32</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/instrumentation/altimeter/setting-inhg</property>
+          <step>0.01</step>
+          <min>27.9</min>
+          <max>31.4</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+
+    </actions>
+
+  </instrument>
+
+</instruments>
+
+</PropertyList>
+
+

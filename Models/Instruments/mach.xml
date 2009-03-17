@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>mach.ac</path>
+
+<animation>
+  <type>material</type>
+  <object-name>Mach.Face</object-name>
+  <object-name>Mach.Needle</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>0.4</green>
+    <blue>0.2</blue>
+    <factor-prop>/controls/lighting/panel-norm</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>Mach.Needle</object-name>
+  <property>/velocities/mach</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>  0</dep></entry>
+    <entry><ind>3</ind><dep>360</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+</PropertyList>

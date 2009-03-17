@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
 <!--
-************************************************************************
-Mig 29 Fulcrum simulation config.
+Mig 29 9-12A Fulcrum
 
-February 2006,  Detlef Faber
-************************************************************************
+February 2006	Detlef Faber
+November 2008	Gary "Buckaroo" Neely
 -->
 
 <PropertyList>
@@ -12,7 +11,7 @@ February 2006,  Detlef Faber
  <sim>
 
   <description>MiG-29 Fulcrum</description>
-  <author>Detlef Faber</author>
+  <author></author>
   
   <flight-model>yasim</flight-model>
   <aero>Mig-29-yasim</aero>
@@ -30,12 +29,7 @@ February 2006,  Detlef Faber
   <sound>
    <path>Aircraft/seahawk/Sounds/seahawk-sound.xml</path>
   </sound>
-<!--
-  <submodels> 
-    <serviceable type="bool">true</serviceable>
-    <path>Aircraft/sabre/Models/submodels.xml</path>
-  </submodels>
--->
+
   <panel>
   <path>Aircraft/Generic/Panels/generic-vfr-panel.xml</path>
   <visibility>false</visibility>
@@ -45,13 +39,16 @@ February 2006,  Detlef Faber
    <path>Aircraft/Mig-29/Models/Mig-29.xml</path>
   </model> 
 
-  <view n="0">
+  <view n="0"> <!-- pilot view -->
    <internal archive="y">true</internal>
    <config>
+    <!-- x/y/z == right/up/back ( Blender/FG y/z/x) -->
     <x-offset-m archive="y" type="double">0.0</x-offset-m>
-    <y-offset-m archive="y" type="double">1.2</y-offset-m>
+    <!--<y-offset-m archive="y" type="double">1.15</y-offset-m>-->
+    <y-offset-m archive="y" type="double">1.20</y-offset-m>
     <z-offset-m archive="y" type="double">4.6</z-offset-m>
-    <pitch-offset-deg>-7.5</pitch-offset-deg>
+    <pitch-offset-deg>-8.0</pitch-offset-deg>
+    <default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
    </config>
   </view>
 
@@ -78,11 +75,13 @@ February 2006,  Detlef Faber
     <target-z-offset-m archive="y" type="double">9.0</target-z-offset-m>
    </config>
   </view>
+
   <view n="5">
    <config>
     <target-z-offset-m archive="y" type="double">9.0</target-z-offset-m>
    </config>
   </view>
+
   <view n="6">
    <config>
     <target-z-offset-m archive="y" type="double">9.0</target-z-offset-m>
@@ -104,101 +103,112 @@ February 2006,  Detlef Faber
 
   <hud>
    <enable3d>false</enable3d>
-  </hud>  
+  </hud>
+
+  <flaps>
+    <setting>0.00</setting>
+    <setting>0.16</setting>
+    <setting>0.32</setting>
+    <setting>0.64</setting>
+    <setting>1.00</setting>
+  </flaps>
+
+  <multiplay>
+    <generic>
+      <float n="0" type="double">0.0</float> <!-- Eng 0 throttle position -->
+      <float n="1" type="double">0.0</float> <!-- Eng 1 throttle position -->
+      <float n="2" type="double">0.0</float> <!-- Eng 0 reheat setting -->
+      <float n="3" type="double">0.0</float> <!-- Eng 1 reheat setting -->
+    </generic>
+  </multiplay>
+
+  <help include="Help/help.xml"/>
+
  </sim>
 
- <engines>
-  <engine>
-   <rpm type="double">700</rpm>
-  </engine>
- </engines>
+<!-- Engine indexes -->
+
+  <engines>
+    <engine n="0">
+      <engine-num type="int">0</engine-num>
+      <throttle-norm type="float">0</throttle-norm>
+      <reheat-norm type="float">0</reheat-norm>
+    </engine>
+    <engine n="1">
+      <engine-num type="int">1</engine-num>
+      <throttle-norm type="float">0</throttle-norm>
+      <reheat-norm type="float">0</reheat-norm>
+    </engine>
+  </engines>
 
 
- <!-- set prop for the manual "bookmark" arrow on the remote compas -->
- <instrumentation>
+  <instrumentation>
+    <!-- set prop for the manual "bookmark" arrow on the remote compass -->
     <magnetic-compass>
        <bookmark-heading-deg type="double">43.0</bookmark-heading-deg>
     </magnetic-compass>
- </instrumentation>
+    <!-- Props required for radar function -->
+    <radar>
+      <range type="int" archive="y">20</range>
+      <range-factor type="double" archive="n">0.001888</range-factor>
+      <minimized type="bool" archive="y">false</minimized>
+      <selected type="int">0</selected>
+    </radar>
+  </instrumentation>
 
- <!-- set up control properties for YASim -->
- <controls>
-   <engines>
-      <engine n="0">
-        <magnetos>3</magnetos>
-        <boost type="double">0.33</boost>
-		<throttle type="float">0.001</throttle>
-      </engine>
-   </engines>
-   <gear>
-      <tailwheel-lock>false</tailwheel-lock>
-   </gear>
-   <canopy>
-      <canopy-pos-norm type="float">1.0</canopy-pos-norm>
-   </canopy>
- 
+<controls>
+  <engines>
+    <engine n="0">
+      <throttle type="double">0</throttle>
+      <reheat type="double">0</reheat>
+    </engine>
+    <engine n="1">
+      <throttle type="double">0</throttle>
+      <reheat type="double">0</reheat>
+    </engine>
+  </engines>
+  <gear>
+    <brake-parking type="double">1.0</brake-parking>
+  </gear>
+  <canopy>
+    <canopy-pos-norm type="float">1.0</canopy-pos-norm>
+  </canopy>
+  <lighting>
+    <nav type="bool">false</nav>
+    <landing type="bool">false</landing>
+  </lighting>
+</controls>
 
- </controls>
+<!-- Custom fuel properties -->
+<consumables>
+  <fuel>
+    <tank-select type="int">1</tank-select>
+    <tank-select-lbs type="double">0</tank-select-lbs>
+  </fuel>
+</consumables>
 
- <yasim>
+
+<yasim>
    <weights>
      <pilot-lb>210</pilot-lb>
    </weights>
- </yasim>
- <!-- Map Keys -->
- <input>
-    <keyboard>
-     
-      <key n="67">
-        <name>C</name>
-        <desc>Toggle Canopy</desc>
-        <binding n="0">
-          <command>nasal</command>
-          <script>Mig-29.toggle_canopy()</script>
-        </binding>
-      </key>
+</yasim>
 
 
-      <key n="78"> 
-        <name>N</name>
-        <desc>Extend Speedbrakes</desc>
-        <binding> 
-          <command>property-adjust</command>
-          <property>/controls/flight/speedbrake</property>
-          <step type="double">0.2</step>
-          <min type="double">0</min>
-          <max type="double">1</max>
-        </binding>
-      </key>
-      <key n="110"> 
-        <name>n</name>
-        <desc>Retract Speedbrakes</desc>
-        <binding> 
-          <command>property-adjust</command>
-          <property>/controls/flight/speedbrake</property>
-          <step type="double">-0.2</step>
-          <min type="double">0</min>
-          <max type="double">1</max>
-        </binding>
-      </key>
+<input>
+  <keyboard include="Systems/Mig-29-keyboard.xml"></keyboard>
+</input>
 
-     </keyboard>
- </input>
 
-<!-- Nasal files/scripts -->
-  <nasal>
-    <f86f>
-      <file>Aircraft/Mig-29/Mig-29.nas</file>
-<!--
-      <script>ext_slats();</script>
--->
-    </f86f>
+<!-- Support scripts -->
 
-    <pilot-g>
-     <file>Aircraft/Mig-29/pilot-g.nas</file>
-    </pilot-g>
+<nasal>
+  <Mig29>
+    <file>Aircraft/Mig-29/Nasal/Mig-29.nas</file>		<!-- Mig-29 general custom nasal -->
+    <file>Aircraft/Mig-29/Nasal/Mig-29-menu.nas</file>		<!-- init dialog menu system -->
+  </Mig29>
+</nasal>
 
-  </nasal>
 
 </PropertyList>
 

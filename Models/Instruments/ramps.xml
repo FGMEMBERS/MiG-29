@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>ramps.ac</path>
+
+<animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>Needle1</object-name>
+  <object-name>Needle2</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>0.4</green>
+    <blue>0.2</blue>
+    <factor-prop>/controls/lighting/panel-norm</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>Needle1</object-name>
+  <property>controls/engines/engine[0]/throttle</property>
+  <factor>0.044</factor>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>Needle2</object-name>
+  <property>controls/engines/engine[1]/throttle</property>
+  <factor>0.044</factor>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+</animation>
+
+</PropertyList>

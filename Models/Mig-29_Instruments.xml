@@ -1,0 +1,174 @@
+<!-- Mig-29 9-13 Instruments            -->
+<!-- Gary R. Neely 'Buckaroo', Jan 2009 -->
+
+
+<PropertyList>
+
+<!-- Special Groups and Shaders -->
+
+<animation>
+  <type>noshadow</type>
+  <object-name>aoa</object-name>
+  <object-name>asi</object-name>
+  <object-name>alt</object-name>
+  <object-name>gear_display</object-name>
+  <object-name>ai</object-name>
+  <object-name>mach</object-name>
+  <object-name>rpm</object-name>
+  <object-name>radio_alt</object-name>
+  <object-name>eng_temp_L</object-name>
+  <object-name>eng_temp_R</object-name>
+  <object-name>clock</object-name>
+  <object-name>control_positions</object-name>
+  <object-name>fuel_display</object-name>
+  <object-name>ramps</object-name>
+</animation>
+
+
+<model>
+  <name>aoa</name>
+  <path>Aircraft/Mig-29/Models/Instruments/aoa.xml</path>
+  <offsets>
+    <x-m>3.782</x-m>
+    <y-m>-0.183</y-m>
+    <z-m>1.008</z-m>
+    <heading-deg>16</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>asi</name>
+  <path>Aircraft/Mig-29/Models/Instruments/asi.xml</path>
+  <offsets>
+    <x-m>3.755</x-m>
+    <y-m>-0.265</y-m>
+    <z-m>0.875</z-m>
+    <heading-deg>10</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>alt</name>
+  <path>Aircraft/Mig-29/Models/Instruments/alt.xml</path>
+  <offsets>
+    <x-m>3.755</x-m>
+    <y-m>-0.265</y-m>
+    <z-m>0.788</z-m>
+    <heading-deg>10</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>gear_display</name>
+  <path>Aircraft/Mig-29/Models/Instruments/gear_display.xml</path>
+  <offsets>
+    <x-m>3.755</x-m>
+    <y-m>-0.265</y-m>
+    <z-m>0.712</z-m>
+    <heading-deg>10</heading-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>ai</name>
+  <path>Aircraft/Mig-29/Models/Instruments/ai.xml</path>
+  <offsets>
+    <x-m>3.758</x-m>
+    <y-m>-0.160</y-m>
+    <z-m>0.875</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>mach</name>
+  <path>Aircraft/Mig-29/Models/Instruments/mach.xml</path>
+  <offsets>
+    <x-m>3.748</x-m>
+    <y-m>-0.054</y-m>
+    <z-m>0.789</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>clock</name>
+  <path>Aircraft/Mig-29/Models/Instruments/clock.xml</path>
+  <offsets>
+    <x-m>3.748</x-m>
+    <y-m>-0.054</y-m>
+    <z-m>0.701</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>control_positions</name>
+  <path>Aircraft/Mig-29/Models/Instruments/control_positions_sm.xml</path>
+  <offsets>
+    <x-m>3.748</x-m>
+    <y-m>0.028</y-m>
+    <z-m>0.707</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>radio_alt</name>
+  <path>Aircraft/Mig-29/Models/Instruments/radio_alt.xml</path>
+  <offsets>
+    <x-m>3.748</x-m>
+    <y-m>0.060</y-m>
+    <z-m>0.875</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>rpm</name>
+  <path>Aircraft/Mig-29/Models/Instruments/rpm.xml</path>
+  <offsets>
+    <x-m>3.748</x-m>
+    <y-m>0.144</y-m>
+    <z-m>0.875</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>eng_temp_L</name>
+  <path>Aircraft/Mig-29/Models/Instruments/eng_temp_L.xml</path>
+  <offsets>
+    <x-m>3.748</x-m>
+    <y-m>0.095</y-m>
+    <z-m>0.802</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>eng_temp_R</name>
+  <path>Aircraft/Mig-29/Models/Instruments/eng_temp_R.xml</path>
+  <offsets>
+    <x-m>3.748</x-m>
+    <y-m>0.155</y-m>
+    <z-m>0.802</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>fuel_display</name>
+  <path>Aircraft/Mig-29/Models/Instruments/fuel_display.xml</path>
+  <offsets>
+    <x-m>3.748</x-m>
+    <y-m>0.212</y-m>
+    <z-m>0.835</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>ramps</name> <!-- Used as throttle position indicator -->
+  <path>Aircraft/Mig-29/Models/Instruments/ramps.xml</path>
+  <offsets>
+    <x-m>3.748</x-m>
+    <y-m>0.207</y-m>
+    <z-m>0.730</z-m>
+  </offsets>
+</model>
+
+</PropertyList>
+
+

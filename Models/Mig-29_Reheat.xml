@@ -1,0 +1,98 @@
+<!-- Mig-29 9-12                         -->
+<!-- Gary R. Neely 'Buckaroo', Nov 2008  -->
+
+
+<PropertyList>
+
+<path>mesh_reheat.ac</path>
+
+<animation>
+  <type>noshadow</type>
+  <object-name>ReheatL</object-name>
+  <object-name>ReheatR</object-name>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>ReheatL</object-name>
+  <condition>
+    <and>
+      <!--<property>controls/engines/engine[0]/reheat</property>-->
+      <property>sim/multiplay/generic/float[2]</property>
+      <not><property>engines/engine[0]/out-of-fuel</property></not>
+    </and>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>ReheatR</object-name>
+  <condition>
+    <and>
+      <!--<property>controls/engines/engine[1]/reheat</property>-->
+      <property>sim/multiplay/generic/float[3]</property>
+      <not><property>engines/engine[1]/out-of-fuel</property></not>
+    </and>
+  </condition>
+</animation>
+
+<animation>
+  <type>scale</type>
+  <object-name>ReheatL</object-name>
+  <!--<property>/controls/engines/engine/throttle</property>-->
+  <property>sim/multiplay/generic/float[0]</property>
+  <x-factor>1</x-factor>
+  <x-offset>0</x-offset>
+  <x-max>1</x-max>
+  <x-min>0</x-min>
+  <y-factor>0</y-factor>
+  <y-offset>1</y-offset>
+  <z-factor>0</z-factor>
+  <z-offset>1</z-offset>
+  <center>
+    <x-m>13.739</x-m>
+    <y-m>-0.950</y-m>
+    <z-m>-0.186</z-m>
+  </center>
+</animation>
+<animation>
+  <type>scale</type>
+  <object-name>ReheatR</object-name>
+  <!--<property>/controls/engines/engine[1]/throttle</property>-->
+  <property>sim/multiplay/generic/float[1]</property>
+  <x-factor>1</x-factor>
+  <x-offset>0</x-offset>
+  <x-max>1</x-max>
+  <x-min>0</x-min>
+  <y-factor>0</y-factor>
+  <y-offset>1</y-offset>
+  <z-factor>0</z-factor>
+  <z-offset>1</z-offset>
+  <center>
+    <x-m>13.739</x-m>
+    <y-m>0.950</y-m>
+    <z-m>-0.186</z-m>
+  </center>
+</animation>
+
+<animation> 
+  <type>blend</type>
+  <object-name>ReheatL</object-name>
+  <!--<property>/controls/engines/engine/throttle</property>-->
+  <property>sim/multiplay/generic/float[0]</property>
+  <factor>-1.0</factor>
+  <offset>1.0</offset>
+  <max>1.0</max>
+  <min>0.0</min>
+</animation>
+<animation> 
+  <type>blend</type>
+  <object-name>ReheatR</object-name>
+  <!--<property>/controls/engines/engine[1]/throttle</property>-->
+  <property>sim/multiplay/generic/float[1]</property>
+  <factor>-1.0</factor>
+  <offset>1.0</offset>
+  <max>1.0</max>
+  <min>0.0</min>
+</animation>
+
+</PropertyList>
