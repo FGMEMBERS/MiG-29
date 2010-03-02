@@ -1,19 +1,19 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "exterior_light" rgb 0.75 0.75 0.75 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.8 0.8 0.8 shi 64 trans 0
-MATERIAL "exterior_medium" rgb 0.4 0.4 0.4 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.8 0.8 0.8 shi 64 trans 0
-MATERIAL "glassGold" rgb 0.442787 0.43926 0.288369 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 16 trans 0.688114
-MATERIAL "exhaust" rgb 0.1 0.1 0.1 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
+MATERIAL "exterior_light" rgb 0.75 0.75 0.75 amb 1.0 1.0 1.0 emis 0 0 0 spec 0.8 0.8 0.8 shi 64 trans 0
+MATERIAL "exterior_medium" rgb 0.4 0.4 0.4 amb 1.0 1.0 1.0 emis 0 0 0 spec 0.8 0.8 0.8 shi 64 trans 0
+MATERIAL "glassGold" rgb 0.442787 0.43926 0.288369 amb 1.0 1.0 1.0 emis 0 0 0 spec 1 1 1 shi 16 trans 0.688114
+MATERIAL "exhaust" rgb 0.1 0.1 0.1 amb 1.0 1.0 1.0 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
 MATERIAL "InteriorDk" rgb 0.112244 0.115453 0.118662 amb 0 0 0 emis 0 0 0 spec 0 0 0 shi 64 trans 0
-MATERIAL "flameholder" rgb 0.627971 0.480518 0.320778 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.5 0.5 0.5 shi 32 trans 0
-MATERIAL "glassIR" rgb 0.260773 0.020477 0.016152 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 8 trans 0.181129
-MATERIAL "auxintake" rgb 0.348749 0.361037 0.361037 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0
-MATERIAL "color" rgb 0.75 0.75 0.75 amb 0.5 0.5 0.5 emis 0 0 0 spec 0.8 0.8 0.8 shi 64 trans 0
-MATERIAL "WheelHub" rgb 0.196927 0.31644 0.222478 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.45 0.45 0.45 shi 64 trans 0
-MATERIAL "Glass" rgb 0.1 0.1 0.1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 16 trans 0.688114
-MATERIAL "gear" rgb 0.8 0.8 0.8 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0
+MATERIAL "flameholder" rgb 0.627971 0.480518 0.320778 amb 1.0 1.0 1.0 emis 0 0 0 spec 0.5 0.5 0.5 shi 32 trans 0
+MATERIAL "glassIR" rgb 0.260773 0.020477 0.016152 amb 1.0 1.0 1.0 emis 0 0 0 spec 1 1 1 shi 8 trans 0.181129
+MATERIAL "auxintake" rgb 0.348749 0.361037 0.361037 amb 1.0 1.0 1.0 emis 0 0 0 spec 1 1 1 shi 64 trans 0
+MATERIAL "color" rgb 0.75 0.75 0.75 amb 1.0 1.0 1.0 emis 0 0 0 spec 0.8 0.8 0.8 shi 64 trans 0
+MATERIAL "WheelHub" rgb 0.196927 0.31644 0.222478 amb 1.0 1.0 1.0 emis 0 0 0 spec 0.45 0.45 0.45 shi 64 trans 0
+MATERIAL "Glass" rgb 0.1 0.1 0.1 amb 1.0 1.0 1.0 emis 0 0 0 spec 1 1 1 shi 16 trans 0.688114
+MATERIAL "gear" rgb 0.8 0.8 0.8 amb 1.0 1.0 1.0 emis 0 0 0 spec 1 1 1 shi 64 trans 0
 MATERIAL "DefaultWhite.003" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
-MATERIAL "Tire" rgb 0.1 0.1 0.1 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.2 0.2 0.2 shi 64 trans 0
+MATERIAL "Tire" rgb 0.1 0.1 0.1 amb 1.0 1.0 1.0 emis 0 0 0 spec 0.2 0.2 0.2 shi 64 trans 0
 OBJECT world
 kids 65
 OBJECT poly
