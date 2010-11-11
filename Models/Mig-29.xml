@@ -816,4 +816,115 @@
   </condition>
 </animation>
 
+<!-- Wingtip contrail -->
+
+<model>
+  <path>Aircraft/Mig-29/Models/Effects/tiptrail.xml</path>
+  <offsets>
+    <x-m> 12 </x-m>
+    <y-m> -5.9 </y-m>
+    <z-m> 0.1</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Aircraft/Mig-29/Models/Effects/tiptrail.xml</path>
+  <offsets>
+    <x-m> 12 </x-m>
+    <y-m> 5.9 </y-m>
+    <z-m> 0.1 </z-m>
+  </offsets>
+</model>
+
+<!--Contrail-->
+
+<model>
+  <path>Aircraft/Mig-29/Models/Effects/contrail.xml</path>
+  <offsets>
+    <x-m> 17 </x-m>
+    <y-m> -1 </y-m>
+    <z-m> 0.1</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Aircraft/Mig-29/Models/Effects/contrail.xml</path>
+  <offsets>
+    <x-m> 17 </x-m>
+    <y-m> 1 </y-m>
+    <z-m> 0.1</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Aircraft/Mig-29/Models/Effects/vapour.xml</path>
+  <offsets>
+    <x-m> 8.2 </x-m>
+    <y-m> -2 </y-m>
+    <z-m> 0.2</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Aircraft/Mig-29/Models/Effects/vapour.xml</path>
+  <offsets>
+    <x-m> 8.2 </x-m>
+    <y-m> 2 </y-m>
+    <z-m> 0.2 </z-m>
+  </offsets>
+</model>
+
+<!-- Tyresmoke-->
+<model>
+ <path>Aircraft/Mig-29/Models/Effects/tyre-smoke-nose.xml</path>
+ <name>tyre-smoke-n</name>
+ <offsets>
+  <x-m>6.281</x-m>
+  <y-m>0</y-m>
+  <z-m>-1.739</z-m>
+ </offsets>
+</model>
+
+<model>
+ <path>Aircraft/Mig-29/Models/Effects/tyre-smoke-port.xml</path>
+ <name>tyre-smoke-p</name>
+ <offsets>
+  <x-m>9.808</x-m>
+  <y-m>-1.570</y-m>
+  <z-m>-1.735</z-m>
+ </offsets>
+</model>
+
+<model>
+ <path>Aircraft/Mig-29/Models/Effects/tyre-smoke-stbd.xml</path>
+ <name>tyre-smoke-s</name>
+ <offsets>
+  <x-m>9.808</x-m>
+  <y-m>1.570</y-m>
+  <z-m>-1.735</z-m>
+ </offsets>
+</model>
+
+<!-- Sonic Boom -->
+<!--Problem with the transparent part of Mig-29 model -->
+<!--
+<model>
+	<path>Aircraft/Mig-29/Models/Effects/fx.xml</path>
+	<offsets>
+		<x-m>15</x-m>
+		<y-m>0</y-m>
+		<z-m>0.3</z-m>
+		<pitch-deg>0</pitch-deg>
+	</offsets>
+</model> -->
+
+<model>
+  <path>Aircraft/Mig-29/Models/Effects/boom.xml</path>
+  <offsets>
+    <x-m> 0 </x-m>
+    <y-m> 0 </y-m>
+    <z-m> 0.2</z-m>
+  </offsets>
+</model>
+
 </PropertyList>

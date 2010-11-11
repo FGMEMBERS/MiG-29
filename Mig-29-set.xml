@@ -17,6 +17,10 @@ November 2008	Gary "Buckaroo" Neely
   <aero>Mig-29-yasim</aero>
   <fuel-fraction>1.0</fuel-fraction>
 
+  <startup>
+   <splash-texture>Aircraft/Mig-29/Mig-29-splash.png</splash-texture>
+  </startup>
+  
   <systems>
    <electrical>
     <path>Aircraft/Generic/generic-electrical.xml</path>
@@ -199,6 +203,39 @@ November 2008	Gary "Buckaroo" Neely
   <keyboard include="Systems/Mig-29-keyboard.xml"></keyboard>
 </input>
 
+<!-- Tyresmoke -->
+<gear>
+ <gear n="0">
+  <tyre-smoke type="int">0</tyre-smoke>
+  <sprayspeed-ms type="double">0</sprayspeed-ms>
+  <spray-density type="double">0</spray-density>
+  <caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+ </gear>
+ <gear n="1">
+  <tyre-smoke type="int">0</tyre-smoke>
+  <sprayspeed-ms type="double">0</sprayspeed-ms>
+  <spray-density type="double">0</spray-density>
+ </gear>
+ <gear n="2">
+  <tyre-smoke type="int">0</tyre-smoke>
+  <sprayspeed-ms type="double">0</sprayspeed-ms>
+  <spray-density type="double">0</spray-density>
+ </gear>
+</gear>
+
+<!-- AAR -->
+<systems>
+ <refuel>
+  <type>probe</type>
+  <serviceable type="bool">true</serviceable>
+ </refuel>
+</systems>
+
+ <limits>
+  <max-positive-g>9</max-positive-g>
+  <max-negative-g>-9</max-negative-g>
+ </limits>
+
 
 <!-- Support scripts -->
 
@@ -206,7 +243,11 @@ November 2008	Gary "Buckaroo" Neely
   <Mig29>
     <file>Aircraft/Mig-29/Nasal/Mig-29.nas</file>		<!-- Mig-29 general custom nasal -->
     <file>Aircraft/Mig-29/Nasal/Mig-29-menu.nas</file>		<!-- init dialog menu system -->
+	<file>Aircraft/Mig-29/Nasal/tyresmoke.nas</file>
   </Mig29>
+  <aar>
+    <file>Aircraft/Generic/aar.nas</file>
+  </aar>
 </nasal>
 
 
