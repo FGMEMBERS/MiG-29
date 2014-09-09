@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>fuel_display.ac</path>
+
+<animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>Needle</object-name>
+  <object-name>ScaleL</object-name>
+  <object-name>ScaleR</object-name>
+  <object-name>Tape</object-name>
+  <object-name>FuelSelect1</object-name>
+  <object-name>FuelSelect1On</object-name>
+  <object-name>FuelSelect2</object-name>
+  <object-name>FuelSelect2On</object-name>
+  <object-name>FuelSelect3</object-name>
+  <object-name>FuelSelect3On</object-name>
+  <object-name>FuelSelect4</object-name>
+  <object-name>FuelSelect4On</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>0.4</green>
+    <blue>0.2</blue>
+    <factor-prop>/controls/lighting/panel-norm</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>FuelSelect1</object-name>
+  <condition>
+    <not-equals>
+      <property>/consumables/fuel/tank-select</property>
+      <value>0</value>
+    </not-equals>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>FuelSelect1On</object-name>
+  <condition>
+    <equals>
+      <property>/consumables/fuel/tank-select</property>
+      <value>0</value>
+    </equals>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>FuelSelect2</object-name>
+  <condition>
+    <not-equals>
+      <property>/consumables/fuel/tank-select</property>
+      <value>1</value>
+    </not-equals>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>FuelSelect2On</object-name>
+  <condition>
+    <equals>
+      <property>/consumables/fuel/tank-select</property>
+      <value>1</value>
+    </equals>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>FuelSelect3</object-name>
+  <condition>
+    <not-equals>
+      <property>/consumables/fuel/tank-select</property>
+      <value>2</value>
+    </not-equals>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>FuelSelect3On</object-name>
+  <condition>
+    <equals>
+      <property>/consumables/fuel/tank-select</property>
+      <value>2</value>
+    </equals>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>FuelSelect4</object-name>
+  <condition>
+    <not-equals>
+      <property>/consumables/fuel/tank-select</property>
+      <value>3</value>
+    </not-equals>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>FuelSelect4On</object-name>
+  <condition>
+    <equals>
+      <property>/consumables/fuel/tank-select</property>
+      <value>3</value>
+    </equals>
+  </condition>
+</animation>
+
+
+<animation>
+  <type>textranslate</type>
+  <object-name>ScaleR</object-name>
+  <property>consumables/fuel/total-fuel-lbs</property>
+  <factor>0.000056875</factor>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>Tape</object-name>
+  <property>consumables/fuel/tank-select-lbs</property>
+  <factor>0.000271</factor>
+  <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+</PropertyList>

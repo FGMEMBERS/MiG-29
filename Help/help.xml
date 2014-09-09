@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<!-- Specific keys -->
+
+  <key>
+    <name>k</name>
+    <desc>Extend Airbrake (4 positions)</desc>
+  </key>
+  <key>
+    <name>j</name>
+    <desc>Retract Airbrake (4 positions)</desc>
+  </key>
+  <key>
+    <name>f</name>
+    <desc>Extend Leading Edge Slats (4 positions)</desc>
+  </key>
+  <key>
+    <name>d</name>
+    <desc>Retract Leading Edge Slats</desc>
+  </key>
+  <key>
+    <name>ctrl-I</name>
+    <desc>Configuration Options And Settings</desc>
+  </key>
+
+<!-- FDM ops -->
+
+<text>
+This is an experimental model representing the earlier Mig-29 9-12
+aircraft. All settings and procedures are best-guess.
+
+Flaps extend to 20 degrees, with 4 positions:
+  3.2, 6.4, 12.8, 20
+
+Extend leading edge slats for better performance at higher angles
+of attack at the expense of increased drag.
+
+Reheat engages at 90% throttle or greater.
+
+Takeoff :
+  flaps 1/4
+  maintain slight down elevator until rotation
+  rotation at ~150 kts
+  retract gear at ~220 kts
+  retract flaps at ~240 kts
+Approach :
+  flaps 1/4 below 240 kts
+  extend gear below 220 kts
+  flaps 1/2 below 200 kts
+  flaps 3/4 below 170 kts
+  flaps full below 150 kts 
+Landing :
+  Optimal touch down at around 155 kts (250km/hour)
+  AoA 10-11 degrees
+
+Dorsal intake vents open and main intake screens close upon main
+gear compression (weight on wheels). This is meant to prevent
+foreign object ingestion, as the Mig-29 like many Russian aircraft
+was designed to operate from rough fields.
+
+</text>
+
+</PropertyList>

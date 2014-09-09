@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<!--
+Mig 29 9-12A Fulcrum
+
+February 2006	Detlef Faber
+November 2008	Gary "Buckaroo" Neely
+-->
+
+<PropertyList>
+
+ <sim>
+
+  <description>MiG-29 Fulcrum</description>
+  <author></author>
+  
+  <flight-model>yasim</flight-model>
+  <aero>Mig-29-yasim</aero>
+  <fuel-fraction>1.0</fuel-fraction>
+
+  <startup>
+   <splash-texture>Aircraft/Mig-29/Mig-29-splash.png</splash-texture>
+  </startup>
+  
+  <systems>
+   <electrical>
+    <path>Aircraft/Generic/generic-electrical.xml</path>
+   </electrical>
+  </systems> 
+ 
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+  <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+
+  <sound>
+   <path>Aircraft/seahawk/Sounds/seahawk-sound.xml</path>
+  </sound>
+
+  <panel>
+  <path>Aircraft/Generic/Panels/generic-vfr-panel.xml</path>
+  <visibility>false</visibility>
+  </panel>
+
+  <model>
+   <path>Aircraft/Mig-29/Models/Mig-29.xml</path>
+  </model> 
+
+  <view n="0"> <!-- pilot view -->
+   <internal archive="y">true</internal>
+   <config>
+    <!-- x/y/z == right/up/back ( Blender/FG y/z/x) -->
+    <x-offset-m archive="y" type="double">0.0</x-offset-m>
+    <!--<y-offset-m archive="y" type="double">1.15</y-offset-m>-->
+    <y-offset-m archive="y" type="double">1.20</y-offset-m>
+    <z-offset-m archive="y" type="double">4.6</z-offset-m>
+    <pitch-offset-deg>-8.0</pitch-offset-deg>
+    <default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+   </config>
+  </view>
+
+  <view n="1">
+   <config>
+    <target-z-offset-m archive="y" type="double">9.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="2">
+   <config>
+    <target-z-offset-m archive="y" type="double">9.9</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="3">
+   <config>
+    <target-z-offset-m archive="y" type="double">9.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="4">
+   <config>
+    <target-z-offset-m archive="y" type="double">9.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="5">
+   <config>
+    <target-z-offset-m archive="y" type="double">9.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="6">
+   <config>
+    <target-z-offset-m archive="y" type="double">9.0</target-z-offset-m>
+   </config>
+  </view>
+
+ <autopilot>
+   <config>
+     <min-climb-speed-kt type="float">70.0</min-climb-speed-kt>
+     <best-climb-speed-kt type="float">75.0</best-climb-speed-kt>
+     <target-climb-rate-fpm type="float">500.0</target-climb-rate-fpm>
+     <target-descent-rate-fpm type="float">1000.0</target-descent-rate-fpm>
+     <elevator-adj-factor type="float">4000.0</elevator-adj-factor>
+     <integral-contribution type="float">0.01</integral-contribution>
+     <zero-pitch-throttle type="float">0.45</zero-pitch-throttle>
+     <zero-pitch-trim-full-throttle type="float">0.14</zero-pitch-trim-full-throttle>
+   </config>
+ </autopilot>
+
+  <hud>
+   <enable3d>false</enable3d>
+  </hud>
+
+  <flaps>
+    <setting>0.00</setting>
+    <setting>0.16</setting>
+    <setting>0.32</setting>
+    <setting>0.64</setting>
+    <setting>1.00</setting>
+  </flaps>
+
+  <multiplay>
+    <generic>
+      <float n="0" type="double">0.0</float> <!-- Eng 0 throttle position -->
+      <float n="1" type="double">0.0</float> <!-- Eng 1 throttle position -->
+      <float n="2" type="double">0.0</float> <!-- Eng 0 reheat setting -->
+      <float n="3" type="double">0.0</float> <!-- Eng 1 reheat setting -->
+    </generic>
+  </multiplay>
+
+  <help include="Help/help.xml"/>
+
+ </sim>
+
+<!-- Engine indexes -->
+
+  <engines>
+    <engine n="0">
+      <engine-num type="int">0</engine-num>
+      <throttle-norm type="float">0</throttle-norm>
+      <reheat-norm type="float">0</reheat-norm>
+    </engine>
+    <engine n="1">
+      <engine-num type="int">1</engine-num>
+      <throttle-norm type="float">0</throttle-norm>
+      <reheat-norm type="float">0</reheat-norm>
+    </engine>
+  </engines>
+
+
+  <instrumentation>
+    <!-- set prop for the manual "bookmark" arrow on the remote compass -->
+    <magnetic-compass>
+       <bookmark-heading-deg type="double">43.0</bookmark-heading-deg>
+    </magnetic-compass>
+    <!-- Props required for radar function -->
+    <radar>
+      <range type="int" archive="y">20</range>
+      <range-factor type="double" archive="n">0.001888</range-factor>
+      <minimized type="bool" archive="y">false</minimized>
+      <selected type="int">0</selected>
+    </radar>
+  </instrumentation>
+
+<controls>
+  <engines>
+    <engine n="0">
+      <throttle type="double">0</throttle>
+      <reheat type="double">0</reheat>
+    </engine>
+    <engine n="1">
+      <throttle type="double">0</throttle>
+      <reheat type="double">0</reheat>
+    </engine>
+  </engines>
+  <gear>
+    <brake-parking type="double">1.0</brake-parking>
+  </gear>
+  <canopy>
+    <canopy-pos-norm type="float">1.0</canopy-pos-norm>
+  </canopy>
+  <lighting>
+    <nav type="bool">false</nav>
+    <landing type="bool">false</landing>
+  </lighting>
+</controls>
+
+<!-- Custom fuel properties -->
+<consumables>
+  <fuel>
+    <tank-select type="int">1</tank-select>
+    <tank-select-lbs type="double">0</tank-select-lbs>
+  </fuel>
+</consumables>
+
+
+<yasim>
+   <weights>
+     <pilot-lb>210</pilot-lb>
+   </weights>
+</yasim>
+
+
+<input>
+  <keyboard include="Systems/Mig-29-keyboard.xml"></keyboard>
+</input>
+
+<!-- Tyresmoke -->
+<gear>
+ <gear n="0">
+  <tyre-smoke type="int">0</tyre-smoke>
+  <sprayspeed-ms type="double">0</sprayspeed-ms>
+  <spray-density type="double">0</spray-density>
+  <caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+ </gear>
+ <gear n="1">
+  <tyre-smoke type="int">0</tyre-smoke>
+  <sprayspeed-ms type="double">0</sprayspeed-ms>
+  <spray-density type="double">0</spray-density>
+ </gear>
+ <gear n="2">
+  <tyre-smoke type="int">0</tyre-smoke>
+  <sprayspeed-ms type="double">0</sprayspeed-ms>
+  <spray-density type="double">0</spray-density>
+ </gear>
+</gear>
+
+<!-- AAR -->
+<systems>
+ <refuel>
+  <type>probe</type>
+  <serviceable type="bool">true</serviceable>
+ </refuel>
+</systems>
+
+ <limits>
+  <max-positive-g>9</max-positive-g>
+  <max-negative-g>-9</max-negative-g>
+ </limits>
+
+
+<!-- Support scripts -->
+
+<nasal>
+  <Mig29>
+    <file>Aircraft/Mig-29/Nasal/Mig-29.nas</file>		<!-- Mig-29 general custom nasal -->
+    <file>Aircraft/Mig-29/Nasal/Mig-29-menu.nas</file>		<!-- init dialog menu system -->
+	<file>Aircraft/Mig-29/Nasal/tyresmoke.nas</file>
+  </Mig29>
+  <aar>
+    <file>Aircraft/Generic/aar.nas</file>
+  </aar>
+</nasal>
+
+
+</PropertyList>
+
+
+
+

@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>gear_display.ac</path>
+
+<animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>Ind.Brake</object-name>
+  <object-name>Ind.AirBrake</object-name>
+  <object-name>Ind.Flaps1</object-name>
+  <object-name>Ind.Flaps2</object-name>
+  <object-name>Ind.Slats</object-name>
+  <object-name>Ind.GearLeftDown</object-name>
+  <object-name>Ind.GearLeftUnlocked</object-name>
+  <object-name>Ind.GearNoseDown</object-name>
+  <object-name>Ind.GearNoseUnlocked</object-name>
+  <object-name>Ind.GearRightDown</object-name>
+  <object-name>Ind.GearRightUnlocked</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>0.4</green>
+    <blue>0.2</blue>
+    <factor-prop>/controls/lighting/panel-norm</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>Ind.Brake</object-name>
+  <condition>
+    <property>/controls/gear/brake-parking</property>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>Ind.GearNoseUnlocked</object-name>
+  <condition>
+    <and>
+      <greater-than>
+        <property>gear/gear[0]/position-norm</property>
+        <value>0</value>
+      </greater-than>
+      <less-than>
+        <property>gear/gear[0]/position-norm</property>
+        <value>1</value>
+      </less-than>
+    </and>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>Ind.GearNoseDown</object-name>
+  <condition>
+    <equals>
+      <property>gear/gear[0]/position-norm</property>
+      <value>1</value>
+    </equals>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>Ind.GearLeftUnlocked</object-name>
+  <condition>
+    <and>
+      <greater-than>
+        <property>gear/gear[1]/position-norm</property>
+        <value>0</value>
+      </greater-than>
+      <less-than>
+        <property>gear/gear[1]/position-norm</property>
+        <value>1</value>
+      </less-than>
+    </and>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>Ind.GearLeftDown</object-name>
+  <condition>
+    <equals>
+      <property>gear/gear[1]/position-norm</property>
+      <value>1</value>
+    </equals>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>Ind.GearRightUnlocked</object-name>
+  <condition>
+    <and>
+      <greater-than>
+        <property>gear/gear[2]/position-norm</property>
+        <value>0</value>
+      </greater-than>
+      <less-than>
+        <property>gear/gear[2]/position-norm</property>
+        <value>1</value>
+      </less-than>
+    </and>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>Ind.GearRightDown</object-name>
+  <condition>
+    <equals>
+      <property>gear/gear[2]/position-norm</property>
+      <value>1</value>
+    </equals>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>Ind.AirBrake</object-name>
+  <condition>
+    <greater-than>
+      <property>surface-positions/speedbrake-pos-norm</property>
+      <value>0</value>
+    </greater-than>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>Ind.Slats</object-name>
+  <condition>
+    <greater-than>
+      <property>surface-positions/slat-pos-norm</property>
+      <value>0</value>
+    </greater-than>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>Ind.Flaps1</object-name>
+  <condition>
+    <greater-than>
+      <property>surface-positions/flap-pos-norm</property>
+      <value>0</value>
+    </greater-than>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>Ind.Flaps2</object-name>
+  <condition>
+    <equals>
+      <property>surface-positions/flap-pos-norm</property>
+      <value>1</value>
+    </equals>
+  </condition>
+</animation>
+
+</PropertyList>

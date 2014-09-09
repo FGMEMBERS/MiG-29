@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+
+<!-- Mig-29 9-12                         -->
+<!-- Gary R. Neely 'Buckaroo', Jan 2008  -->
+<!--
+
+Lighting control properties are passed over MP, therefore the animations
+take their cues from the MP properties rather than the source control
+properties. Here are the control to MP prop mappings as defined under
+Mig-29.nas:
+
+var Mig29_MPNav		= props.globals.getNode("/sim/multiplay/generic/float[4]");
+
+-->
+
+<PropertyList>
+
+<path>mesh_lights.ac</path>
+
+
+<!-- Special Shaders -->
+
+<animation>
+  <type>noshadow</type>
+<!--
+  <object-name>BeaconL</object-name>
+  <object-name>BeaconU</object-name>
+  <object-name>BeaconLOn</object-name>
+  <object-name>BeaconUOn</object-name>
+-->
+  <object-name>TailLamp</object-name>
+  <object-name>TailLampOn</object-name>
+  <object-name>WingtipLampL</object-name>
+  <object-name>WingtipLampR</object-name>
+  <object-name>WingtipLampLOn</object-name>
+  <object-name>WingtipLampROn</object-name>
+<!--
+  <object-name>LightTaxiGlow</object-name>
+-->
+  <object-name>LightTailGlow</object-name>
+  <object-name>LightNavGlowL</object-name>
+  <object-name>LightNavGlowR</object-name>
+</animation>
+
+
+<!-- Animations -->
+
+<!--
+<animation>
+  <type>select</type>
+  <object-name>BeaconLOn</object-name>
+  <object-name>BeaconUOn</object-name>
+  <condition>
+    <and>
+      <property>/controls/lighting/beacon</property>
+      <property>sim/model/Mig-29/lighting/beacon/state[0]</property>
+    </and>
+  </condition>
+</animation>
+-->
+
+<animation>
+  <type>select</type>
+  <object-name>TailLampOn</object-name>
+  <condition>
+    <property>sim/multiplay/generic/float[4]</property>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>TailLamp</object-name>
+  <condition>
+    <not><property>sim/multiplay/generic/float[4]</property></not>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>WingtipLampLOn</object-name>
+  <object-name>WingtipLampROn</object-name>
+  <condition>
+    <property>/controls/lighting/nav</property>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>WingtipLampL</object-name>
+  <object-name>WingtipLampR</object-name>
+  <condition>
+    <not><property>sim/multiplay/generic/float[4]</property></not>
+  </condition>
+</animation>
+
+
+<!-- Left (red) nav light -->
+
+<animation>
+  <type>select</type>
+  <object-name>LightNavGlowL</object-name>
+  <condition>
+    <property>sim/multiplay/generic/float[4]</property>
+  </condition>
+</animation>
+
+<animation>
+  <type>flash</type>
+  <object-name>LightNavGlowL</object-name>
+  <center>
+   <x-m>11.761</x-m>
+   <y-m>-5.721</y-m>
+   <z-m>0.113</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+  <power>4</power>
+  <factor>1</factor>
+  <offset>0.4</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
+</animation>
+
+
+<!-- Right (green) nav light -->
+
+<animation>
+  <type>select</type>
+  <object-name>LightNavGlowR</object-name>
+  <condition>
+    <property>sim/multiplay/generic/float[4]</property>
+  </condition>
+</animation>
+
+<animation>
+  <type>flash</type>
+  <object-name>LightNavGlowR</object-name>
+  <center>
+   <x-m>11.761</x-m>
+   <y-m>5.721</y-m>
+   <z-m>0.113</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+  <power>4</power>
+  <factor>1</factor>
+  <offset>0.4</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
+</animation>
+
+
+<!-- Tail Light -->
+
+<animation>
+  <type>select</type>
+  <object-name>LightTailGlow</object-name>
+  <condition>
+    <property>sim/multiplay/generic/float[4]</property>
+  </condition>
+</animation>
+
+<animation>
+  <type>flash</type>
+  <object-name>LightTailGlow</object-name>
+  <center>
+   <x-m>14.907</x-m>
+   <y-m>-1.965</y-m>
+   <z-m>2.192</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <power>2</power>
+  <factor>1</factor>
+  <offset>0.2</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
+</animation>
+
+
+<!-- Landing & Taxi Lights -->
+
+</PropertyList>
+

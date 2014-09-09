@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<name>Mig29-config</name>
+<modal>false</modal>
+<width>400</width>
+<height>500</height>
+<layout>vbox</layout>
+
+<text>
+  <label>Mig-29 9-12 Menu</label>
+</text>
+
+<hrule/>
+
+<button>
+  <halign>center</halign>
+  <legend>Help</legend>
+  <key>h</key>
+  <binding>
+   <command>nasal</command>
+   <script>gui.showHelpDialog("/sim/help")</script>
+  </binding>
+</button>
+
+<empty><pref-height>20</pref-height></empty>
+
+<group>
+  <layout>hbox</layout>
+  <text>
+    <halign>left</halign>
+    <label>  Instrument Lighting: Dim-Bright</label>
+  </text>
+  <slider>
+    <property>/controls/lighting/panel-norm</property>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+    <min>0</min>
+    <max>1</max>
+  </slider>
+</group>
+
+<group>
+  <layout>hbox</layout>
+  <text>
+    <halign>left</halign>
+    <label>  Nav Lights:</label>
+  </text>
+  <checkbox>
+    <property>/controls/lighting/nav</property>
+    <binding>
+      <command>dialog-apply</command>
+    </binding>
+  </checkbox>
+</group>
+
+<empty><pref-height>20</pref-height></empty>
+
+<text>
+  <halign>left</halign>
+  <label>  Seat and View Preferences:</label>
+</text>
+
+<group>
+  <layout>table</layout>
+
+  <empty>
+    <row>0</row>
+    <col>0</col>
+    <pref-width>10</pref-width>
+  </empty>
+
+  <text>
+    <row>0</row>
+    <col>1</col>
+    <halign>left</halign>
+    <label>Seat: Down-Up</label>
+  </text>
+
+  <slider>
+    <row>0</row>
+    <col>2</col>
+    <property>/sim/current-view/y-offset-m</property>
+    <binding>
+      <condition>
+        <equals>
+          <property>sim/current-view/view-number</property>
+          <value>0</value>
+        </equals>
+      </condition>
+      <command>dialog-apply</command>
+    </binding>
+    <min>1.15</min>
+    <max>1.25</max>
+  </slider>
+
+  <empty>
+    <row>1</row>
+    <col>0</col>
+    <pref-width>10</pref-width>
+  </empty>
+
+  <text>
+    <row>1</row>
+    <col>1</col>
+    <halign>left</halign>
+    <label>Seat: Forward-Back</label>
+  </text>
+
+  <slider>
+    <row>1</row>
+    <col>2</col>
+    <property>/sim/current-view/z-offset-m</property>
+    <binding>
+      <condition>
+        <equals>
+          <property>sim/current-view/view-number</property>
+          <value>0</value>
+        </equals>
+      </condition>
+      <command>dialog-apply</command>
+    </binding>
+    <min>4.5</min>
+    <max>4.7</max>
+  </slider>
+
+  <empty>
+    <row>2</row>
+    <col>0</col>
+    <pref-width>10</pref-width>
+  </empty>
+
+  <text>
+    <row>2</row>
+    <col>1</col>
+    <halign>left</halign>
+    <label>View: Look Down-Up</label>
+  </text>
+
+  <slider>
+    <row>2</row>
+    <col>2</col>
+    <property>/sim/current-view/pitch-offset-deg</property>
+    <binding>
+      <condition>
+        <equals>
+          <property>sim/current-view/view-number</property>
+          <value>0</value>
+        </equals>
+      </condition>
+      <command>dialog-apply</command>
+    </binding>
+    <min>-12</min>
+    <max>0</max>
+  </slider>
+
+</group>
+
+<empty><pref-height>20</pref-height></empty>
+
+<button>
+  <halign>center</halign>
+  <legend>Close</legend>
+  <default>true</default>
+  <key>Esc</key>
+  <binding>
+    <command>dialog-close</command>
+  </binding>
+</button>
+
+<empty><stretch>true</stretch></empty>
+
+</PropertyList>

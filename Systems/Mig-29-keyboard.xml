@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<!--
+     <key n="67">
+       <name>C</name>
+       <desc>Toggle Canopy</desc>
+       <binding n="0">
+         <command>nasal</command>
+         <script>Mig-29.toggle_canopy()</script>
+       </binding>
+     </key>
+-->
+     <key n="106"> 
+       <name>j</name>
+       <desc>Retract Speedbrakes</desc>
+       <binding> 
+         <command>property-adjust</command>
+         <property>/controls/flight/speedbrake</property>
+         <step type="double">-0.25</step>
+         <min type="double">0</min>
+         <max type="double">1</max>
+       </binding>
+     </key>
+     <key n="107"> 
+       <name>k</name>
+       <desc>Extend Speedbrakes</desc>
+       <binding> 
+         <command>property-adjust</command>
+         <property>/controls/flight/speedbrake</property>
+         <step type="double">0.25</step>
+         <min type="double">0</min>
+         <max type="double">1</max>
+       </binding>
+     </key>
+
+     <key n="100">
+       <name>d</name>
+       <desc>Retract Slats</desc>
+       <binding>
+         <command>property-adjust</command>
+         <property>/controls/flight/slats</property>
+         <step type="double">-0.25</step>
+       </binding>
+     </key>
+     <key n="102">
+       <name>f</name>
+       <desc>Extend Slats</desc>
+       <binding>
+         <command>property-adjust</command>
+         <property>/controls/flight/slats</property>
+         <step type="double">0.25</step>
+       </binding>
+     </key>
+
+   <key n="61">
+    <name>=</name>
+    <desc>Menu</desc>
+    <binding>
+     <command>dialog-show</command>
+     <dialog-name>Mig29-config</dialog-name>
+    </binding>
+<!--
+    <binding>
+      <command>nasal</command>
+      <script>Mig29.config_dialog.toggle()</script>
+    </binding>
+-->
+   </key>
+
+
+</PropertyList>

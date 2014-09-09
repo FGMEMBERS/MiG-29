@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+
+<!-- Mig-29 Fulcrum-A 2D Hotspot panels -->
+<!-- Gary R. Neely 'Buckaroo', 2009     -->
+
+
+<PropertyList>
+
+<!-- 463mm x 250mm -->
+
+<name>Main Panel</name>
+<background>Aircraft/Mig-29/Panels/transparent-bg.rgb</background>
+<w>512</w>
+<h>276</h>
+
+<instruments>
+
+  <instrument>
+    <name>panel hotspots</name>
+    <x>256</x> <!-- center x -->
+    <y>138</y> <!-- center y -->
+    <w>512</w>
+    <h>276</h>
+    <w-base>512</w-base>
+    <h-base>276</h-base>
+
+    <actions>
+
+<!-- Clock adjustment hotspots -->
+
+      <action>
+        <name>hour dec</name>
+        <button>0</button>
+        <x>-128</x>
+        <y>-138</y>
+        <w>24</w>
+        <h>24</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>instrumentation/clock/offset-sec</property>
+          <step>-3600</step>
+          <min>-43200</min>
+          <max>43200</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>hour inc</name>
+        <button>0</button>
+        <x>-104</x>
+        <y>-138</y>
+        <w>24</w>
+        <h>24</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>instrumentation/clock/offset-sec</property>
+          <step>3600</step>
+          <min>-43200</min>
+          <max>43200</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>min dec</name>
+        <button>1</button>
+        <x>-128</x>
+        <y>-138</y>
+        <w>24</w>
+        <h>24</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>instrumentation/clock/offset-sec</property>
+          <step>-60</step>
+          <min>-43200</min>
+          <max>43200</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>min inc</name>
+        <button>1</button>
+        <x>-104</x>
+        <y>-138</y>
+        <w>24</w>
+        <h>24</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>instrumentation/clock/offset-sec</property>
+          <step>60</step>
+          <min>-43200</min>
+          <max>43200</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+
+
+<!-- Fuel Display hotspots -->
+
+      <action>
+        <name>tank1</name>
+        <button>0</button>
+        <x>202</x>
+        <y>50</y>
+        <w>8</w>
+        <h>16</h>
+        <binding>
+          <command>property-assign</command>
+          <property>consumables/fuel/tank-select</property>
+          <value>0</value>
+        </binding>
+      </action>
+      <action>
+        <name>tank2</name>
+        <button>0</button>
+        <x>202</x>
+        <y>32</y>
+        <w>8</w>
+        <h>16</h>
+        <binding>
+          <command>property-assign</command>
+          <property>consumables/fuel/tank-select</property>
+          <value>1</value>
+        </binding>
+      </action>
+      <action>
+        <name>tank3</name>
+        <button>0</button>
+        <x>202</x>
+        <y>12</y>
+        <w>8</w>
+        <h>16</h>
+        <binding>
+          <command>property-assign</command>
+          <property>consumables/fuel/tank-select</property>
+          <value>2</value>
+        </binding>
+      </action>
+      <action>
+        <name>tank4</name>
+        <button>0</button>
+        <x>202</x>
+        <y>-8</y>
+        <w>8</w>
+        <h>16</h>
+        <binding>
+          <command>property-assign</command>
+          <property>consumables/fuel/tank-select</property>
+          <value>3</value>
+        </binding>
+      </action>
+
+    </actions>
+
+  </instrument>
+
+</instruments>
+
+</PropertyList>
+
+

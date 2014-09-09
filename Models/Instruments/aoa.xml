@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>aoa.ac</path>
+
+<animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>Face2</object-name>
+  <object-name>Needle.AoA</object-name>
+  <object-name>Needle.g</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>0.4</green>
+    <blue>0.2</blue>
+    <factor-prop>/controls/lighting/panel-norm</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>Needle.AoA</object-name>
+  <property>/orientation/alpha-deg</property>
+  <interpolation>
+    <entry><ind>-90</ind><dep>-18</dep></entry>
+    <entry><ind> -5</ind><dep>-18</dep></entry>
+    <entry><ind>  0</ind><dep>  0</dep></entry>
+    <entry><ind> 30</ind><dep>108</dep></entry>
+    <entry><ind> 90</ind><dep>108</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>Needle.g</object-name>
+  <property>/accelerations/pilot-g</property>
+  <interpolation>
+    <entry><ind>-3</ind><dep>-16.2</dep></entry>
+    <entry><ind> 0</ind><dep>    0</dep></entry>
+    <entry><ind>10</ind><dep>  108</dep></entry>
+    <entry><ind>20</ind><dep>  108</dep></entry>
+  </interpolation>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+</PropertyList>
+

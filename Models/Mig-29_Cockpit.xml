@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+
+<!-- Mig-29 9-12                         -->
+<!-- Gary R. Neely 'Buckaroo', Dec 2008  -->
+
+<PropertyList>
+
+<path>mesh_cockpit.ac</path>
+
+
+<!-- Sub-Model Imports -->
+
+<model>
+  <name>Instruments</name>
+  <path>Aircraft/Mig-29/Models/Mig-29_Instruments.xml</path>
+</model>
+
+
+<!-- Hotspot Panels -->
+
+<model>
+  <name>2Dhotspots</name>
+  <path>Aircraft/Mig-29/Panels/Panels.xml</path>
+</model>
+
+
+<!-- Special Shaders -->
+
+<animation>
+  <type>noshadow</type>
+  <object-name>Throttle</object-name>
+  <object-name>AnnunModules</object-name>
+  <object-name>WarnABL</object-name>
+  <object-name>WarnABR</object-name>
+  <object-name>WarnFuel</object-name>
+</animation>
+
+
+<!-- Throttle -->
+
+<animation>
+  <type>translate</type>
+  <object-name>Throttle</object-name>
+  <property>controls/engines/engine[0]/throttle</property>
+  <factor>-0.3</factor>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!-- Warnings and notice lights -->
+
+<animation>
+  <type>select</type>
+  <object-name>WarnABL</object-name>
+  <condition>
+    <property>sim/multiplay/generic/float[2]</property>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>WarnABR</object-name>
+  <condition>
+    <property>sim/multiplay/generic/float[3]</property>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>WarnFuel</object-name>
+  <condition>
+    <less-than>
+      <property>consumables/fuel/total-fuel-lbs</property>
+      <value>1000</value>
+    </less-than>
+  </condition>
+</animation>
+
+</PropertyList>
+
