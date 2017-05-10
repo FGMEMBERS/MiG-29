@@ -17,6 +17,22 @@ November 2008	Gary "Buckaroo" Neely
   <aero>Mig-29-yasim</aero>
   <fuel-fraction>1.0</fuel-fraction>
 
+  <tags>
+   <tag>fighter</tag>
+   <tag>mikoyan-gurevich</tag>
+   <tag>1970s</tag>
+   <tag>1980s</tag>
+   <tag>1990s</tag>
+   <tag>2000s</tag>
+   <tag>2010s</tag>
+   <tag>hud</tag>
+   <tag>retractable-gear</tag>
+   <tag>supersonic</tag>
+   <tag>afterburner</tag>
+   <tag>jet</tag>
+   <tag>twin-engine</tag>
+  </tags>
+
   <startup>
    <splash-texture>Aircraft/Mig-29/Mig-29-splash.png</splash-texture>
   </startup>
